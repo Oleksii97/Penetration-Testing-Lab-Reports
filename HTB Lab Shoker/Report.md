@@ -87,7 +87,6 @@ sudo /usr/bin/perl -e 'exec "/bin/sh";'
 *   Deploy a **Web Application Firewall (WAF)** with rulesets designed to detect and block common RCE patterns, specifically targeting function definitions in HTTP headers (`() { :; };`).
 
 ---
-**Report compiled by:**
-*Senior Cybersecurity Consultant*
-*20+ Years Experience | CISSP, OSCP, OSCE*Junior Penetration tester
+Report compiled by:
+Junior Penetration tester
 Kudriavtsev Oleksii
