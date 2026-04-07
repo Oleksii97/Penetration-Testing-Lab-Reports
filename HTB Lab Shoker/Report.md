@@ -1,4 +1,3 @@
-As a senior penetration tester with 20 years of experience in the field, I have translated and refined your findings into a professional **Penetration Test Report**. This version uses industry-standard terminology (OSCP/CREST/PTES style) suitable for both technical teams and stakeholders.
 
 ---
 
